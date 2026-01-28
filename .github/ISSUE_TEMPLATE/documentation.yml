@@ -1,0 +1,154 @@
+name: 📝 Documentation
+description: Report documentation issues or suggest improvements
+title: "[Docs]: "
+labels: ["documentation"]
+assignees:
+  - Carlymarie992
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Documentation Improvement
+        
+        Help us improve our documentation! Clear, accurate documentation is essential for making this tool accessible.
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Documentation Type
+      description: What type of documentation needs attention?
+      options:
+        - README.md
+        - CONTRIBUTING.md
+        - SECURITY.md
+        - API documentation / Code comments
+        - Installation guide
+        - Usage examples
+        - Configuration guide
+        - Docker documentation
+        - Error messages
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What kind of documentation issue is this?
+      options:
+        - Incorrect information
+        - Outdated information
+        - Missing information
+        - Unclear explanation
+        - Broken links
+        - Typo or grammar error
+        - Code example doesn't work
+        - Suggestion for improvement
+        - Translation needed
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Documentation Location
+      description: Where is the documentation issue?
+      placeholder: |
+        - File: [e.g., README.md, docs/api.md]
+        - Section: [e.g., "Installation", "Quick Start"]
+        - Line number: [if applicable]
+        - URL: [if applicable]
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content
+      description: What does the documentation currently say?
+      placeholder: Quote the current documentation or describe what's there now
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue Description
+      description: What's wrong or what's missing?
+      placeholder: |
+        - What is incorrect or unclear?
+        - What information is missing?
+        - Why is this a problem?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-content
+    attributes:
+      label: Suggested Improvement
+      description: How should the documentation be improved?
+      placeholder: Provide suggested text, example, or description of what should be added
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Target Audience
+      description: Who is this documentation for?
+      options:
+        - End users (non-technical)
+        - Developers / Contributors
+        - System administrators
+        - Researchers
+        - Organizations / Partners
+        - All users
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-important
+    attributes:
+      label: Why This Matters
+      description: Why is this documentation improvement important?
+      placeholder: |
+        - Helps users understand...
+        - Prevents common errors...
+        - Makes the tool more accessible...
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or References
+      description: Provide examples, screenshots, or references
+      placeholder: |
+        - Example code that works
+        - Screenshots showing the issue
+        - Links to good examples from other projects
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: Related issues, user feedback, etc.
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution Interest
+      options:
+        - label: I would be willing to submit a pull request to fix this documentation issue
+          required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## Thank you!
+        
+        Good documentation makes this tool accessible to more people who need it. Your feedback helps improve the project for everyone!

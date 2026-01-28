@@ -1,0 +1,113 @@
+name: 🐛 Bug Report
+description: Report a software issue, error, or unexpected behavior
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+assignees:
+  - Carlymarie992
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you for reporting a bug!
+        
+        Please provide as much detail as possible to help us identify and fix the issue.
+        
+        **Important**: Do not include sensitive personal information, real names, or actual conversation data in this report.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of the bug
+      placeholder: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce the behavior
+      placeholder: |
+        1. Run command '...'
+        2. With file type '...'
+        3. See error '...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+      placeholder: Describe the expected outcome
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened
+      placeholder: Describe what happened instead
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this issue?
+      options:
+        - Critical - Application crashes or data loss
+        - High - Major functionality broken
+        - Medium - Feature not working as expected
+        - Low - Minor issue or cosmetic problem
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Information about your setup
+      placeholder: |
+        - OS: [e.g., Ubuntu 22.04, Windows 11, macOS 13]
+        - Python Version: [e.g., 3.11.0]
+        - Installation Method: [pip, docker]
+        - Version/Commit: [e.g., v1.0.0 or commit hash]
+      value: |
+        - OS: 
+        - Python Version: 
+        - Installation Method: 
+        - Version/Commit: 
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Messages and Logs
+      description: Include relevant error messages or logs (ensure no sensitive data is included)
+      placeholder: Paste error messages here
+      render: shell
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other relevant information about the problem
+      placeholder: Add screenshots, configuration details, or other context
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: I have removed all sensitive/personal information from this report
+          required: true
+        - label: I am using the latest version or have noted my version above
+          required: true

@@ -1,0 +1,223 @@
+name: 🤝 Research Collaboration
+description: Propose academic research collaboration or partnership
+title: "[Research]: "
+labels: ["research", "collaboration"]
+assignees:
+  - Carlymarie992
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Research Collaboration Inquiry
+        
+        Thank you for your interest in collaborating on research related to coercive control analysis!
+        
+        This template is for academic researchers, institutions, or research organizations seeking to collaborate on:
+        - Academic studies using this tool
+        - Joint research projects
+        - Data validation studies
+        - Algorithm improvement research
+        - Publication collaborations
+
+  - type: input
+    id: researcher-name
+    attributes:
+      label: Principal Researcher / Contact Name
+      description: Primary contact for this collaboration
+      placeholder: Dr. Jane Smith
+    validations:
+      required: true
+
+  - type: input
+    id: institution
+    attributes:
+      label: Institution / Organization
+      description: Your academic institution or research organization
+      placeholder: University of Example, Department of Social Work
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Contact Email
+      description: Email for collaboration discussion
+      placeholder: researcher@university.edu
+    validations:
+      required: true
+
+  - type: dropdown
+    id: collaboration-type
+    attributes:
+      label: Type of Collaboration
+      description: What type of research collaboration are you proposing?
+      options:
+        - Academic study using the tool
+        - Joint research project
+        - Algorithm validation/improvement
+        - Longitudinal study
+        - Comparative analysis
+        - Tool evaluation/benchmarking
+        - Publication collaboration
+        - Grant-funded research
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: research-description
+    attributes:
+      label: Research Description
+      description: Describe your proposed research or study
+      placeholder: |
+        - Research question(s)
+        - Study objectives
+        - Methodology
+        - Expected outcomes
+    validations:
+      required: true
+
+  - type: textarea
+    id: collaboration-goals
+    attributes:
+      label: Collaboration Goals
+      description: What are you hoping to achieve through this collaboration?
+      placeholder: |
+        - Validate pattern detection algorithms
+        - Extend analysis to new domains
+        - Publish joint research
+        - Improve tool accuracy
+    validations:
+      required: true
+
+  - type: dropdown
+    id: timeline
+    attributes:
+      label: Project Timeline
+      description: Expected timeline for this collaboration
+      options:
+        - 1-3 months
+        - 3-6 months
+        - 6-12 months
+        - 1-2 years
+        - Ongoing/Long-term
+        - Not yet determined
+    validations:
+      required: true
+
+  - type: dropdown
+    id: irb-status
+    attributes:
+      label: IRB/Ethics Approval Status
+      description: Status of Institutional Review Board or ethics committee approval
+      options:
+        - Already approved
+        - Pending approval
+        - Will seek approval
+        - Not required for this research
+        - Not yet determined
+    validations:
+      required: true
+
+  - type: textarea
+    id: data-needs
+    attributes:
+      label: Data Requirements
+      description: What data or tool capabilities do you need?
+      placeholder: |
+        - Dataset requirements
+        - Analysis features needed
+        - Format requirements
+        - Special capabilities
+
+  - type: textarea
+    id: tool-modifications
+    attributes:
+      label: Tool Modifications Needed
+      description: Do you need any modifications or extensions to the tool?
+      placeholder: Describe any custom features or modifications required
+
+  - type: dropdown
+    id: funding-status
+    attributes:
+      label: Funding Status
+      description: Is this research funded?
+      options:
+        - Grant-funded
+        - Institutionally funded
+        - Seeking funding
+        - Unfunded
+        - Not applicable
+    validations:
+      required: true
+
+  - type: textarea
+    id: publication-plans
+    attributes:
+      label: Publication Plans
+      description: Do you plan to publish results? If so, what type of publication?
+      placeholder: |
+        - Academic journal
+        - Conference proceedings
+        - Technical report
+        - Thesis/dissertation
+        - No publication planned
+
+  - type: textarea
+    id: expertise
+    attributes:
+      label: Relevant Expertise
+      description: What expertise does your team bring to this collaboration?
+      placeholder: |
+        - Domain expertise in domestic violence
+        - Machine learning expertise
+        - Qualitative research methods
+        - Clinical psychology background
+
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Expected Contribution to Project
+      description: How will this research benefit the project and its mission?
+      placeholder: |
+        - Validation of detection methods
+        - New pattern discovery
+        - Tool improvements
+        - Increased credibility
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      description: Any other relevant information about your collaboration proposal
+      placeholder: Previous publications, related work, special considerations, etc.
+
+  - type: checkboxes
+    id: commitments
+    attributes:
+      label: Collaboration Commitments
+      options:
+        - label: I commit to following ethical research practices
+          required: true
+        - label: I will ensure proper IRB/ethics approval before working with human subjects data
+          required: true
+        - label: I understand this project prioritizes privacy and security
+          required: true
+        - label: I am willing to share research findings that could improve the tool
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## Next Steps
+        
+        After submission:
+        1. The maintainer will review your proposal
+        2. We may schedule a call to discuss further
+        3. We'll collaborate on a research agreement
+        4. We'll coordinate on tool access and support
+        
+        **Thank you for your interest in research collaboration!**

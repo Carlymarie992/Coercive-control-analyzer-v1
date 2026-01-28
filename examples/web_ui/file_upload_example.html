@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Message Upload - Coercive Control Analysis</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        h1 { color: #333; margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 30px; font-size: 14px; }
+        
+        .upload-area {
+            border: 3px dashed #ddd;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        
+        .upload-area:hover { border-color: #667eea; background: #f8f9ff; }
+        
+        select, button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        button:hover { transform: translateY(-2px); }
+        button:disabled { background: #ccc; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="logo">
+            <img src="https://github.com/user-attachments/assets/8e4e6c39-b4aa-4d63-8653-f447ef3d3044" alt="Coercive Control Analyzer Logo" aria-label="Logo">
+        </div>
+
+        <h1>📱 Universal Message Upload</h1>
+        <p class="subtitle">Analyze conversations from any messaging platform</p>
+
+        <form id="uploadForm" aria-label="Conversation Upload Form">
+            <div class="upload-area" id="uploadArea" tabindex="0" aria-label="File upload area">
+                <div style="font-size: 48px;">📁</div>
+                <p id="uploadText">Drag & drop your conversation file here or click to browse</p>
+                <input type="file" id="fileInput" aria-label="File input" style="display: none;">
+            </div>
+
+            <label for="platform" style="display:none;">Platform</label>
+            <select id="platform" aria-label="Platform">
+                <option value="auto">Auto-detect Platform</option>
+                <option value="whatsapp">WhatsApp</option>
+                <option value="facebook_json">Facebook Messenger (JSON)</option>
+                <option value="instagram">Instagram DMs</option>
+                <option value="imessage_txt">iMessage</option>
+                <option value="email">Email</option>
+                <option value="sms">SMS</option>
+            </select>
+
+            <button id="submitBtn" disabled>Analyze Conversation</button>
+        </form>
+        <div id="progress" style="display:none; margin-top:10px; color:#764ba2; font-weight:600;">Uploading...</div>
+        <div id="result" style="display:none; margin-top:20px; background:#f8f9ff; border-radius:8px; padding:20px;"></div>
+    </div>
+
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const uploadText = document.getElementById('uploadText');
+        const uploadForm = document.getElementById('uploadForm');
+        const progress = document.getElementById('progress');
+        const result = document.getElementById('result');
+
+        // Accessibility: allow keyboard activation
+        uploadArea.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                fileInput.click();
+            }
+        });
+
+        uploadArea.onclick = () => fileInput.click();
+        fileInput.onchange = (e) => {
+            if (e.target.files.length > 0) {
+                submitBtn.disabled = false;
+                uploadText.textContent = 'File: ' + e.target.files[0].name;
+            } else {
+                submitBtn.disabled = true;
+                uploadText.textContent = 'Drag & drop your conversation file here or click to browse';
+            }
+        };
+
+        uploadForm.onsubmit = async (e) => {
+            e.preventDefault();
+            if (!fileInput.files.length) {
+                alert('Please select a file to analyze.');
+                return;
+            }
+            submitBtn.disabled = true;
+            progress.style.display = 'block';
+            result.style.display = 'none';
+
+            // Simulate upload and analysis (replace with real API call)
+            setTimeout(() => {
+                progress.style.display = 'none';
+                result.style.display = 'block';
+                result.innerHTML = `<strong>Analysis complete!</strong><br>File: ${fileInput.files[0].name}<br>Platform: ${platform.value}<br><em>(Connect to backend for real results)</em>`;
+                submitBtn.disabled = false;
+            }, 2000);
+        };
+    </script>
+</body>
+</html>

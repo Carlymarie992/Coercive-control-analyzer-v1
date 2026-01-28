@@ -1,0 +1,151 @@
+name: ❓ Support Request
+description: Get help with installation, configuration, or usage
+title: "[Support]: "
+labels: ["support", "question"]
+assignees:
+  - Carlymarie992
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Support Request
+        
+        Need help getting started or solving a problem? We're here to help!
+        
+        **Before submitting**: Please check:
+        - [README.md](https://github.com/Carlymarie992/coercive-control-analysis/blob/main/README.md) - Installation and usage guide
+        - [Existing issues](https://github.com/Carlymarie992/coercive-control-analysis/issues) - Your question may already be answered
+        - [CONTRIBUTING.md](https://github.com/Carlymarie992/coercive-control-analysis/blob/main/CONTRIBUTING.md) - Development guidelines
+        
+        **Note**: Do not include sensitive personal information or actual abuse-related data in this request.
+
+  - type: dropdown
+    id: support-category
+    attributes:
+      label: Support Category
+      description: What kind of help do you need?
+      options:
+        - Installation / Setup
+        - Configuration
+        - Usage / How-to
+        - Platform-specific question (WhatsApp, Discord, etc.)
+        - Security / Privacy features
+        - Docker / Deployment
+        - API / Integration
+        - Performance issue
+        - General question
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What do you need help with?
+      placeholder: Describe your question or problem in detail
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: What Have You Tried?
+      description: What have you already attempted?
+      placeholder: |
+        - Commands run
+        - Documentation consulted
+        - Troubleshooting steps taken
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Information about your setup
+      value: |
+        - OS: 
+        - Python Version: 
+        - Installation Method: [pip/docker]
+        - Version/Commit: 
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Outcome
+      description: What are you trying to accomplish?
+      placeholder: Describe what you're trying to do
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: What's happening instead?
+      placeholder: Describe what's currently happening
+
+  - type: textarea
+    id: code-config
+    attributes:
+      label: Relevant Code or Configuration
+      description: Share relevant code snippets or configuration (remove sensitive data)
+      placeholder: Paste code or configuration here
+      render: python
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Messages or Logs
+      description: Include any error messages or relevant logs (ensure no sensitive data)
+      placeholder: Paste error messages here
+      render: shell
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      description: How urgent is this request?
+      options:
+        - Blocking critical work
+        - High - Need help soon
+        - Medium - Would like help this week
+        - Low - Whenever convenient
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: Screenshots, related issues, or other helpful context
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have searched existing issues for similar questions
+          required: true
+        - label: I have consulted the README and documentation
+          required: true
+        - label: I have removed all sensitive/personal information from this request
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## Response Time
+        
+        - **General questions**: Usually within 2-3 business days
+        - **Urgent issues**: We'll prioritize and respond ASAP
+        - **Security concerns**: Please use the Security Vulnerability template instead
+        
+        **For immediate help with a crisis situation**, please contact:
+        - **National Domestic Violence Hotline (US)**: 1-800-799-7233
+        - **Crisis Text Line**: Text HOME to 741741

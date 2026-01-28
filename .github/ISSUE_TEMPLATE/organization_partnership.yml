@@ -1,0 +1,262 @@
+name: 💼 Organization Partnership
+description: Inquiry from domestic violence support organizations
+title: "[Partnership]: "
+labels: ["partnership", "organization"]
+assignees:
+  - Carlymarie992
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Organization Partnership Inquiry
+        
+        Thank you for your interest in using this tool to support those affected by coercive control!
+        
+        This template is for:
+        - Domestic violence support organizations
+        - Advocacy groups
+        - Legal aid organizations
+        - Social service agencies
+        - Healthcare providers
+        - Other organizations supporting abuse survivors
+
+  - type: input
+    id: organization-name
+    attributes:
+      label: Organization Name
+      description: Name of your organization
+      placeholder: Example Domestic Violence Support Center
+    validations:
+      required: true
+
+  - type: input
+    id: contact-name
+    attributes:
+      label: Primary Contact Name
+      description: Main contact person for this partnership
+      placeholder: Jane Smith, Executive Director
+    validations:
+      required: true
+
+  - type: input
+    id: contact-email
+    attributes:
+      label: Contact Email
+      description: Email address for partnership discussions
+      placeholder: contact@organization.org
+    validations:
+      required: true
+
+  - type: input
+    id: phone
+    attributes:
+      label: Phone Number (Optional)
+      description: Phone number for urgent or detailed discussions
+      placeholder: +1-555-0123
+
+  - type: dropdown
+    id: organization-type
+    attributes:
+      label: Organization Type
+      description: What type of organization are you?
+      options:
+        - Domestic violence shelter/support center
+        - Legal aid organization
+        - Victim advocacy group
+        - Social services agency
+        - Healthcare provider
+        - Government agency
+        - Non-profit organization
+        - Research institution
+        - Educational institution
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location / Service Area
+      description: Where is your organization located or who do you serve?
+      placeholder: City, State/Province, Country
+    validations:
+      required: true
+
+  - type: textarea
+    id: organization-mission
+    attributes:
+      label: Organization Mission
+      description: Brief description of your organization and mission
+      placeholder: |
+        - What services do you provide?
+        - Who do you serve?
+        - What is your organization's focus?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: partnership-type
+    attributes:
+      label: Type of Partnership
+      description: What kind of partnership are you interested in?
+      options:
+        - Tool implementation for caseworkers
+        - Training and support for staff
+        - Custom deployment/integration
+        - Data analysis collaboration
+        - Funding/sponsorship partnership
+        - Advocacy partnership
+        - Technical consultation
+        - Pilot program
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Intended Use Case
+      description: How do you plan to use this tool?
+      placeholder: |
+        - Support clients in documenting abuse patterns
+        - Train staff on coercive control recognition
+        - Provide evidence for legal proceedings
+        - Research and program evaluation
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scale
+    attributes:
+      label: Expected Scale of Use
+      description: How many staff or clients would use the tool?
+      options:
+        - 1-5 users
+        - 6-20 users
+        - 21-50 users
+        - 51-100 users
+        - 100+ users
+        - Not yet determined
+    validations:
+      required: true
+
+  - type: dropdown
+    id: timeline
+    attributes:
+      label: Implementation Timeline
+      description: When are you hoping to begin using the tool?
+      options:
+        - Immediately
+        - Within 1 month
+        - 1-3 months
+        - 3-6 months
+        - 6-12 months
+        - Exploring options
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-capacity
+    attributes:
+      label: Technical Capacity
+      description: What is your organization's technical capacity?
+      placeholder: |
+        - Do you have IT staff?
+        - What systems do you currently use?
+        - What is your technical comfort level?
+        - Do you need hosting support?
+
+  - type: textarea
+    id: support-needs
+    attributes:
+      label: Support Needs
+      description: What support would you need from us?
+      placeholder: |
+        - Training for staff
+        - Technical setup assistance
+        - Ongoing support
+        - Custom features
+        - Integration with existing systems
+    validations:
+      required: true
+
+  - type: dropdown
+    id: budget
+    attributes:
+      label: Budget Availability
+      description: Do you have budget for implementation, training, or support?
+      options:
+        - Grant-funded project
+        - Organizational budget available
+        - Limited budget
+        - Seeking pro-bono support
+        - To be determined
+    validations:
+      required: true
+
+  - type: textarea
+    id: privacy-security
+    attributes:
+      label: Privacy & Security Requirements
+      description: What privacy and security requirements do you have?
+      placeholder: |
+        - HIPAA compliance
+        - Data residency requirements
+        - Confidentiality policies
+        - Security certifications needed
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: Partnership Goals
+      description: What are you hoping to achieve through this partnership?
+      placeholder: |
+        - Better support for clients
+        - More effective advocacy
+        - Improved documentation
+        - Staff training and education
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      description: Any other relevant information about your organization or partnership needs
+      placeholder: Previous tools used, special considerations, unique circumstances, etc.
+
+  - type: checkboxes
+    id: commitments
+    attributes:
+      label: Partnership Commitments
+      options:
+        - label: Our organization is committed to supporting survivors of domestic violence and coercive control
+          required: true
+        - label: We will use this tool ethically and in accordance with best practices
+          required: true
+        - label: We understand the importance of privacy and data security
+          required: true
+        - label: We are willing to provide feedback to improve the tool
+          required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## Next Steps
+        
+        After submission:
+        1. We will review your partnership inquiry
+        2. We may schedule a call to discuss your needs in detail
+        3. We'll explore how we can best support your organization
+        4. We'll work together on an implementation plan
+        
+        **Thank you for your commitment to supporting survivors!**
+        
+        ### Emergency Resources
+        
+        If you need immediate assistance for a client in crisis:
+        - **National Domestic Violence Hotline (US)**: 1-800-799-7233
+        - **Crisis Text Line**: Text HOME to 741741

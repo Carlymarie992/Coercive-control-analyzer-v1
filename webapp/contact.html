@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Coercive Control Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="analyze.html">Analyze Evidence</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Contact Us</h1>
+            <p>Have questions, feedback, or need support? Reach out to us below.</p>
+        </section>
+        <section class="mission">
+            <form id="contactForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                <button type="submit" class="cta">Send Message</button>
+            </form>
+            <div id="contactResult" style="display:none; margin-top:20px; background:#f8f9ff; border-radius:8px; padding:20px;"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Coercive Control Analyzer. All rights reserved.</p>
+    </footer>
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        const contactResult = document.getElementById('contactResult');
+        contactForm.onsubmit = async (e) => {
+            e.preventDefault();
+            contactResult.style.display = 'block';
+            contactResult.innerHTML = `<strong>Thank you for reaching out!</strong><br>We will get back to you soon.`;
+            contactForm.reset();
+        };
+    </script>
+</body>
+</html>

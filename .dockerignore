@@ -1,0 +1,54 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Documentation
+*.md
+docs/
+LICENSE
+
+# CI/CD
+.github/
+
+# Development files
+docker-compose.override.yml
+.env.local
+.env.development
+
+# Test files
+tests/
+test_*.py
+
+# Output directories (don't include in image)
+output/
+temp/
+data/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

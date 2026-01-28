@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze Evidence - Coercive Control Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="analyze.html">Analyze Evidence</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Analyze Your Evidence</h1>
+            <p>Upload your files and let our system do the rest. Get a court-ready report and organized evidence package with minimal effort.</p>
+        </section>
+        <section class="mission">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="fileInput">Select your evidence file:</label><br>
+                <input type="file" id="fileInput" name="fileInput" required><br><br>
+                <label for="caseId">Case Folder Name (optional):</label><br>
+                <input type="text" id="caseId" name="caseId" placeholder="e.g. Smith_vs_Jones"><br><br>
+                <label for="reportFormat">Report Format:</label>
+                <select id="reportFormat" name="reportFormat">
+                    <option value="html">HTML</option>
+                    <option value="txt">Text</option>
+                    <option value="json">JSON</option>
+                </select><br><br>
+                <label for="includeVisuals">
+                    <input type="checkbox" id="includeVisuals" name="includeVisuals" checked>
+                    Include visualizations
+                </label><br><br>
+                <button type="submit" class="cta">Start Analysis</button>
+            </form>
+            <div id="progress" style="display:none; margin-top:10px; color:#764ba2; font-weight:600;">Processing...</div>
+            <div id="result" style="display:none; margin-top:20px; background:#f8f9ff; border-radius:8px; padding:20px;"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Coercive Control Analyzer. All rights reserved.</p>
+    </footer>
+    <script>
+        const uploadForm = document.getElementById('uploadForm');
+        const progress = document.getElementById('progress');
+        const result = document.getElementById('result');
+        uploadForm.onsubmit = async (e) => {
+            e.preventDefault();
+            progress.style.display = 'block';
+            result.style.display = 'none';
+            setTimeout(() => {
+                progress.style.display = 'none';
+                result.style.display = 'block';
+                result.innerHTML = `<strong>Analysis complete!</strong><br>Your court-ready package is available for download.<br><em>(Connect to backend for real results)</em>`;
+            }, 2500);
+        };
+    </script>
+</body>
+</html>

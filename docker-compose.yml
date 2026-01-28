@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  analyzer:
+    build: .
+    container_name: coercive-control-analyzer
+    volumes:
+      # Mount data directory for input files
+      - ./data:/app/data
+      # Mount output directory for reports
+      - ./output:/app/output
+      # Mount temp directory
+      - ./temp:/app/temp
+    environment:
+      # Analysis settings
+      - ANALYSIS_THRESHOLD=0.5
+      - MAX_FILE_SIZE_MB=100
+      
+      # Security settings
+      - ENABLE_ENCRYPTION=false
+      - ENABLE_ANONYMIZATION=false
+      - AUTO_DELETE_TEMP_FILES=true
+      
+      # Logging
+      - LOG_LEVEL=INFO
+    
+    # Override command to keep container running for development
+    # command: tail -f /dev/null
+    
+    # For production, use the analyze command
+    # command: python analyze.py /app/data/input.pdf
+    
+    networks:
+      - analyzer-network
+
+networks:
+  analyzer-network:
+    driver: bridge
+
+volumes:
+  data:
+  output:
+  temp:

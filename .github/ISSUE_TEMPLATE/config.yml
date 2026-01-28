@@ -1,0 +1,25 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🆘 Emergency Support
+    url: https://www.thehotline.org/
+    about: If you are in immediate danger, please contact the National Domestic Violence Hotline (1-800-799-7233) or local emergency services.
+  
+  - name: 📧 Direct Contact
+    url: mailto:cmcheney92@gmail.com
+    about: For urgent matters, partnership inquiries, or sensitive discussions, email the project maintainer directly.
+  
+  - name: 🔒 Security Advisory
+    url: https://github.com/Carlymarie992/coercive-control-analysis/security/advisories/new
+    about: For reporting security vulnerabilities privately, use GitHub's Security Advisory feature.
+  
+  - name: 📚 Documentation
+    url: https://github.com/Carlymarie992/coercive-control-analysis/blob/main/README.md
+    about: View comprehensive documentation, installation guides, and usage examples.
+  
+  - name: 🤝 Contributing Guide
+    url: https://github.com/Carlymarie992/coercive-control-analysis/blob/main/CONTRIBUTING.md
+    about: Learn how to contribute to this project, including code standards and development setup.
+  
+  - name: 💬 GitHub Discussions
+    url: https://github.com/Carlymarie992/coercive-control-analysis/discussions
+    about: Join community discussions, share ideas, and ask general questions.
