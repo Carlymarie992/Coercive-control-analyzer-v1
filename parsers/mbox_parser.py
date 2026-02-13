@@ -4,6 +4,7 @@ import mailbox
 from datetime import datetime
 from typing import List, Dict
 import re
+from bs4 import BeautifulSoup
 
 
 class MboxParser:
@@ -94,11 +95,16 @@ class MboxParser:
 
     def _html_to_text(self, html: str) -> str:
         """Simple HTML to text conversion."""
-        # Remove script and style elements
-        html = re.sub(r'<script[^>]*>.*?</script>', '', html, flags=re.DOTALL | re.IGNORECASE)
-        html = re.sub(r'<style[^>]*>.*?</style>', '', html, flags=re.DOTALL | re.IGNORECASE)
-        # Remove HTML tags
-        text = re.sub(r'<[^>]+>', ' ', html)
+        # Use an HTML parser to remove script and style elements and extract text
+        soup = BeautifulSoup(html, 'html.parser')
+
+        # Remove script and style elements completely
+        for tag in soup(['script', 'style']):
+            tag.decompose()
+
+        # Extract text content
+        text = soup.get_text(separator=' ')
+
         # Clean up whitespace
         text = re.sub(r'\s+', ' ', text)
         return text.strip()
