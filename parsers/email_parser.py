@@ -92,7 +92,7 @@ class EmailParser:
     def _html_to_text(self, html: str) -> str:
         """Simple HTML to text conversion."""
         # Remove script and style elements
-        html = re.sub(r'<script[^>]*>.*?</script>', '', html, flags=re.DOTALL | re.IGNORECASE)
+        html = re.sub(r'<script\b[^>]*>.*?</script\b[^>]*>', '', html, flags=re.DOTALL | re.IGNORECASE)
         html = re.sub(r'<style[^>]*>.*?</style>', '', html, flags=re.DOTALL | re.IGNORECASE)
         # Remove HTML tags
         text = re.sub(r'<[^>]+>', ' ', html)
