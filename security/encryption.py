@@ -41,12 +41,6 @@ class DataEncryptor:
         if salt is None:
             salt = os.urandom(16)
 
-        kdf = PBKDF2HMAC(
-            algorithm=hashes.SHA256(),
-            length=32,
-            salt=salt,
-            iterations=100000,
-            backend=default_backend()
         )
 
         key = base64.urlsafe_b64encode(kdf.derive(password.encode()))
